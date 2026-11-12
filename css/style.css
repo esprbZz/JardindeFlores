@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,900&display=swap');
+*{
+    font-family: 'Poppins',cursive;
+}
+body{
+    color: azure;
+    width: 100%;
+    height: 82vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    /* padding-top: -30; */
+}
+
+.botones{
+    padding: 9px;
+    border-radius: 80px;
+    background-color: transparent;
+    border: none;
+}
+
+.botones a{
+    background-color: #0a2be9;
+    padding: 9px;
+    border-radius: 80px;
+    -webkit-border-radius: 80px;
+    -moz-border-radius: 80px;
+    -ms-border-radius: 80px;
+    -o-border-radius: 80px;
+
+}
+
+.botones a:focus{
+    background-color: rgb(50, 194, 194);
+}
+
+.greetings{
+    font-size: 7rem;
+    font-weight: 900;
+}
+
+/* ILUMINACIÓN DEL SALUDO */
+.greetings > span {
+    color: #151515;
+    animation: glow 3s linear infinite;
+}
+
+/* Efecto de luz neón y parpadeo */
+@keyframes glow {
+
+    0%, 15%, 18%, 20%, 35%, 38%, 70%, 73%, 100% {
+        color: #fff;
+        text-shadow:
+            0 0 5px #39c6d6,
+            0 0 12px #39c6d6,
+            0 0 30px #39c6d6,
+            0 0 50px #39c6d6,
+            0 0 80px #39c6d6;
+    }
+
+    16%, 19%, 36%, 71% {
+        color: #151515;
+        text-shadow: none;
+    }
+}
+
+/* Retrasos individuales para cada letra */
+.greetings > span:nth-child(1)  { animation-delay: 0s; }
+.greetings > span:nth-child(2)  { animation-delay: 0.15s; }
+.greetings > span:nth-child(3)  { animation-delay: 0.30s; }
+.greetings > span:nth-child(4)  { animation-delay: 0.45s; }
+.greetings > span:nth-child(5)  { animation-delay: 0.60s; }
+.greetings > span:nth-child(6)  { animation-delay: 0.75s; }
+.greetings > span:nth-child(7)  { animation-delay: 0.90s; }
+.greetings > span:nth-child(8)  { animation-delay: 1.05s; }
+.greetings > span:nth-child(9)  { animation-delay: 1.20s; }
+.greetings > span:nth-child(10) { animation-delay: 1.35s; }
+
+.description{
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.button a{
+    text-decoration: none;
+    font-size: 1rem;
+    color: #111;
+}
+
+@media screen and (max-width:574px){
+    .greetings{
+        display: block;
+        font-size: 4rem;
+        font-weight: 800;
+        text-align: center;
+    }
+    .description{
+        font-size: 2rem;
+    }
+    
+    .button a{
+        font-size: 1rem;
+    }
+}
+
+/* Botón NO */
+#noBtn {
+    cursor: pointer;
+    position: relative;
+    transition: left 0.2s ease, top 0.2s ease;
+    z-index: 100;
+}
+
+/* CONTENEDOR DE LOS BOTONES */
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* ESTILO GENERAL */
+.botones {
+    display: inline-block;
+    padding: 12px 35px;
+    border-radius: 30px;
+    border: 2px solid transparent;
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* BOTÓN SÍ */
+.botones.si {
+    background-color: #0e853f;
+    color: white;
+    border-color: #0e853f;
+}
+
+.botones.si:hover {
+    background-color: #12a34e;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #12a34f;
+}
+
+/* BOTÓN NO */
+.botones.no {
+    background-color: #830e0e;
+    color: white;
+    border-color: #830e0e;
+
+    position: relative;
+    transition: left 0.2s ease, top 0.2s ease, background-color 0.3s ease;
+}
+
+.botones.no:hover {
+    background-color: #a71919;
+}
+
+/* CUANDO NO SE CONVIERTA EN OKI */
+.botones.oki {
+    background-color: #ff69b4;
+    color: white;
+    border-color: #ff69b4;
+    box-shadow: 0 0 15px #ff69b4;
+}
+
+.botones.oki:hover {
+    background-color: #ff85c1;
+    transform: scale(1.1);
+}
