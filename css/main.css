@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&display=swap');
 *,
 *::after,
 *::before {
@@ -1765,4 +1766,28 @@ z-index:5;
         opacity: 0;
     }
 
+}
+
+/* TIPOGRAFÍA PARA LA LETRA DE SALVATORE*/ 
+
+#lyrics {
+    position: absolute;
+    z-index: 10;
+    bottom: 20%;
+    left: 0;
+    width: 100%;
+
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.5rem, 3vw, 2.3rem);
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-align: center;
+
+    color: #f5dce8;
+    text-shadow:
+        0 0 8px rgba(255, 182, 213, 0.6),
+        0 0 20px rgba(255, 105, 180, 0.3);
+
+    transition: opacity 0.5s ease;
+    padding: 0 20px;
 }
